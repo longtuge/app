@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_goods_info"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="app.coolweather.com.myapplication.model.GoodsInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <app.coolweather.com.myapplication.model.util.ScrollViewContainer
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <app.coolweather.com.myapplication.model.util.MyScrollView
+                android:id="@+id/my_scroll_view_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/goods_banner"
+                        app:indicator_drawable_selected="@drawable/dianji"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp" />
+
+                    <RelativeLayout
+                        android:background="#ffffff"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@mipmap/tianmao" />
+
+                        <TextView
+                            android:id="@+id/tv_goods_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="26dp"
+                            android:layout_marginTop="3dp"
+                            android:text="【整车订金】吉利 博越 智能互联精品SUV 赢取六重大礼"
+                            android:textColor="#111111"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:id="@+id/bt_goods_title"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="1dp"
+                            android:background="@null"
+                            android:drawableTop="@mipmap/goods_fenxiang"
+                            android:text="分享"
+                            android:textColor="#60656f"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="27dp"
+                            android:layout_marginLeft="5dp"
+                            android:text="¥"
+                            android:textColor="#ff5000"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tv_goods_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="36dp"
+                            android:text="99"
+                            android:textColor="#ff5000"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/tv_goods_title_express"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:text="快递：0.00"
+                            android:textColor="#60656f"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_goods_title_sales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="2dp"
+                            android:text="月销92笔"
+                            android:textColor="#60656f"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_goods_title_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginRight="5dp"
+                            android:text="浙江杭州"
+                            android:textColor="#60656f"
+                            android:textSize="9dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_goods_pledge"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/dagou"
+                            android:gravity="center_vertical"
+                            android:text="正品保证"
+                            android:textColor="#60656f"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/dagou"
+                            android:gravity="center_vertical"
+                            android:text="不支持7天退换"
+                            android:textColor="#60656f"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/dagou"
+                            android:gravity="center_vertical"
+                            android:text="极速退款"
+                            android:textColor="#60656f"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:visibility="invisible" />
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/home_arrow_right" />
+                    </LinearLayout>
+                    <View
+                        android:background="#f4f4f4"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp">
+                    </View>
+                    <LinearLayout
+                        android:id="@+id/ll_goods_select"
+                        android:gravity="center"
+                        android:background="#ffffff"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <TextView
+                            android:textColor="#ff1111"
+                            android:text="选择车辆版本，颜色分类"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/home_arrow_right" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+                    <LinearLayout
+                        android:id="@+id/ll_goods_parameter"
+                        android:gravity="center"
+                        android:background="#ffffff"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <TextView
+                            android:text="产品参数"
+                            android:textColor="#ff1111"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/home_arrow_right" />
+                    </LinearLayout>
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="#eeeeee"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="50dp"
+                                android:layout_height="1dp"
+                                android:layout_marginRight="10dp"
+                                android:background="#d9d9d9" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/main_message"
+                                android:text="评价" />
+
+                            <View
+                                android:layout_width="50dp"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="#d9d9d9" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/goods_estimate_pingjia"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_goods_estimate_pingjiashu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="10dp"
+                                android:text="宝贝评价(1)" />
+
+                            <TextView
+                                android:id="@+id/tv_goods_estimate_user"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="18dp"
+                                android:drawableLeft="@mipmap/goods_estimate_name_l"
+                                android:drawableRight="@mipmap/goods_estimate_name_r"
+                                android:gravity="center"
+                                android:text="淘宝用户"
+                                android:textColor="#111111"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/tv_goods_estimate_pingjia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:text="用户评论"
+                                android:textColor="#111111"
+                                android:textSize="11dp" />
+
+                            <TextView
+                                android:id="@+id/tv_goods_estimate_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="12dp"
+                                android:text="2017-07-28"
+                                android:textSize="9dp" />
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="39dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="30dp"
+                                android:background="@drawable/goods_estimate_quanbupingjia_u" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#d9d9d9" />
+
+                        <RelativeLayout
+                            android:id="@+id/goods_estimate_mendian"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp">
+
+                            <TextView
+                                android:id="@+id/tv_goods_estimate_mendian_name"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="11dp"
+                                android:drawableLeft="@drawable/dian1"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="苍南吉易汽车销售服务有限公司"
+                                android:textColor="#211111"
+                                android:textSize="11dp" />
+
+                            <TextView
+                                android:id="@+id/tv_goods_estimate_mendian_juli"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/tv_goods_estimate_mendian_name"
+                                android:layout_marginStart="20dp"
+                                android:layout_toEndOf="@+id/tv_goods_estimate_mendian_name"
+                                android:text="12.4km"
+                                android:textColor="#787c80"
+                                android:textSize="10dp" />
+
+                            <TextView
+                                android:id="@+id/tv_goods_estimate_mendian_dizhi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/tv_goods_estimate_mendian_name"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:text="苍南县灵溪镇苍南达到271号"
+                                android:textColor="#787c80"
+                                android:textSize="10dp" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_below="@+id/tv_goods_estimate_mendian_dizhi"
+                                android:src="@drawable/home_arrow_right" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="10dp"
+                                android:src="@drawable/goods_estimate_quanbumendian" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d9d9d9" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/goods_estimate_wenti"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:text="问大家"
+                                android:textColor="#111111"
+                                android:textSize="11dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/textView5"
+                                android:layout_below="@+id/textView5"
+                                android:drawableLeft="@mipmap/goods_estimate_wen"
+                                android:gravity="center"
+                                android:text="多久提上车？"
+                                android:textColor="#111111"
+                                android:textSize="10dp"
+                                android:id="@+id/goods_estimate_wenti_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1个回答"
+                                android:textColor="#d9d9d9"
+                                android:textSize="10dp"
+                                android:id="@+id/goods_estimate_wenti_1_1"
+                                android:layout_below="@+id/goods_estimate_wenti_1"
+                                android:layout_alignStart="@+id/goods_estimate_wenti_2_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@mipmap/goods_estimate_wen"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="这款车总价是多少"
+                                android:textColor="#111111"
+                                android:textSize="10dp"
+                                android:layout_below="@+id/goods_estimate_wenti_1_1"
+                                android:layout_alignStart="@+id/goods_estimate_wenti_1"
+                                android:id="@+id/goods_estimate_wenti_2" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1个回答"
+                                android:textColor="#d9d9d9"
+                                android:textSize="10dp"
+                                android:layout_below="@+id/goods_estimate_wenti_2"
+                                android:layout_alignStart="@+id/goods_estimate_wenti_2"
+                                android:layout_marginStart="13dp"
+                                android:id="@+id/goods_estimate_wenti_2_1" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentStart="true"
+                                android:src="@drawable/goods_estimate_quanbuwenti" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#d9d9d9" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/goods_estimate_logo"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_goods_estimate_logo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@mipmap/jili" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/goods_estimate_logo_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="15dp"
+                                        android:text="吉利汽车官方旗舰店"
+                                        android:textColor="#111111"
+                                        android:textSize="12dp" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@mipmap/tianmao" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/goods_estimate_shangpin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="53"
+                                        android:textColor="#111111" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="全部宝贝"
+                                        android:textColor="#d9d9d9" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="39dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="#d9d9d9" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="10.4万"
+                                        android:textColor="#111111" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="关注人数"
+                                        android:textColor="#d9d9d9" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="39dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginRight="15dp"
+                                    android:background="#d9d9d9" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableRight="@mipmap/gao"
+                                        android:text="宝贝描述：4.9" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableRight="@mipmap/gao"
+                                        android:text="卖家服务：4.9" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableRight="@mipmap/gao"
+                                        android:text="物流服务：4.9" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+                                <ImageView
+                                    android:src="@drawable/goods_estimate_fenlei"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="203dp"
+                                    android:id="@+id/iv_goods_estimate_loge_fenlei" />
+
+                                <ImageView
+                                    android:id="@+id/iv_goods_estimate_loge_jindian"
+                                    android:src="@drawable/goods_estimate_jindian"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@+id/iv_goods_estimate_loge_fenlei"
+                                    android:layout_toEndOf="@+id/iv_goods_estimate_loge_fenlei"
+                                    android:layout_marginStart="53dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </app.coolweather.com.myapplication.model.util.MyScrollView>
+            <app.coolweather.com.myapplication.model.util.MyScrollView
+                android:id="@+id/my_scroll_view_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="#eeeeee"
+                        android:gravity="center">
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#d9d9d9" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@mipmap/xiangqing"
+                            android:text="详情" />
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="#d9d9d9" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/goods_image"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </LinearLayout>
+                </LinearLayout>
+            </app.coolweather.com.myapplication.model.util.MyScrollView>
+        </app.coolweather.com.myapplication.model.util.ScrollViewContainer>
+
+        <LinearLayout
+            android:id="@+id/goods_title"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ib_goods_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@mipmap/sanguo"
+                android:background="#f9f9f9" />
+
+            <RadioGroup
+                android:id="@+id/rg_goods_title"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="#f9f9f9"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_goods_info_item_1"
+                    style="@style/GoodsItem"
+                    android:text="宝贝" />
+
+                <RadioButton
+                    android:id="@+id/rb_goods_info_item_2"
+                    style="@style/GoodsItem"
+                    android:text="评价" />
+
+                <RadioButton
+                    android:id="@+id/rb_goods_info_item_3"
+                    style="@style/GoodsItem"
+                    android:text="详情" />
+
+                <RadioButton
+                    android:id="@+id/rb_goods_info_item_4"
+                    style="@style/GoodsItem"
+                    android:text="推荐" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_goods_1"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:src="@mipmap/goods_info_item_l" />
+
+        <ImageButton
+            android:id="@+id/ib_goods_2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:src="@mipmap/goods_info_item_r1" />
+
+        <ImageButton
+            android:id="@+id/ib_goods_3"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:src="@mipmap/goods_info_item_r2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/radioGroup"
+            android:background="#d5d5d5" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_goods_dianpu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@mipmap/dianpu"
+                android:gravity="center"
+                android:text="店铺"
+                android:textColor="#686868"
+                android:textSize="12dp" />
+
+            <RadioButton
+                android:id="@+id/rb_goods_kefu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@mipmap/kefu"
+                android:gravity="center"
+                android:text="客服"
+                android:textColor="#686868"
+                android:textSize="12dp" />
+
+            <RadioButton
+                android:id="@+id/rb_goods_shoucang"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@mipmap/shoucang"
+                android:gravity="center"
+                android:text="收藏"
+                android:textColor="#686868"
+                android:textSize="12dp" />
+
+            <RadioButton
+                android:id="@+id/rb_goods_car"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:background="#ffc101"
+                android:button="@null"
+                android:gravity="center"
+                android:text="加入购物车"
+                android:textColor="#ffffff" />
+
+            <RadioButton
+                android:id="@+id/rb_goods_buy"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:background="#ff5301"
+                android:button="@null"
+                android:gravity="center"
+                android:text="立即购买"
+                android:textColor="#ffffff" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#d5d5d5" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

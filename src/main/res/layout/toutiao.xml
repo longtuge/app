@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:src="@drawable/toutiao"
+        android:layout_marginLeft="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <app.coolweather.com.myapplication.model.util.MarqueeView
+        android:id="@+id/marqueeView"
+        app:mvAnimDuration="1000"
+        app:mvInterval="2000"
+        android:layout_width="match_parent"
+        app:mvTextColor="@color/cardview_dark_background"
+        android:layout_height="50dp">
+    </app.coolweather.com.myapplication.model.util.MarqueeView>
+</LinearLayout>

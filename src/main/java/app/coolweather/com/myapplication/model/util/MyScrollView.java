@@ -1,0 +1,98 @@
+package app.coolweather.com.myapplication.model.util;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.widget.ScrollView;
+
+/**
+ * Created by Administrator on 2017/11/6.
+ */
+
+public class MyScrollView extends ScrollView {
+
+    private static String TAG=MyScrollView.class.getName();
+
+
+    public MyScrollView(Context context) {
+        super(context);
+    }
+
+    public MyScrollView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+
+    public MyScrollView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+
+        switch (ev.getAction()){
+            case MotionEvent.ACTION_MOVE:
+
+                if(mScrollListener!=null){
+                    int contentHeight=getChildAt(0).getHeight();
+                    int scrollHeight=getHeight();
+                    Log.d(TAG,"scrollY:"+getScrollY()+"contentHeight:"+contentHeight+" scrollHeight"+scrollHeight+"object:"+this);
+
+                    int scrollY=getScrollY();
+                    mScrollListener.onScroll(scrollY);
+
+                    if(scrollY+scrollHeight>=contentHeight||contentHeight<=scrollHeight){
+                        mScrollListener.onScrollToBottom();
+                    }else {
+                        mScrollListener.notBottom();
+                    }
+
+                    if(scrollY==0){
+                        mScrollListener.onScrollToTop();
+                    }
+
+                }
+
+                break;
+        }
+        boolean result=super.onTouchEvent(ev);
+        requestDisallowInterceptTouchEvent(false);
+
+        return result;
+    }
+
+    private ScrollListener mScrollListener;
+
+    public void setScrollListener(ScrollListener scrollListener) {
+        this.mScrollListener = scrollListener;
+    }
+
+
+
+    public interface ScrollListener{
+        void onScrollToBottom();
+        void onScrollToTop();
+        void onScroll(int scrollY);
+        void notBottom();
+    }
+
+    public interface  ScrollViewListener{
+        void onScrollChanged(int x, int y, int oldX, int oldY);
+    }
+
+    private ScrollViewListener scrollViewListener=null;
+
+
+    public void setScrollViewListener(ScrollViewListener scrollViewListener) {
+        this.scrollViewListener = scrollViewListener;
+    }
+    @Override
+    protected void onScrollChanged(int x, int y, int oldX, int oldY) {
+        super.onScrollChanged(x, y, oldX, oldY);
+        if (scrollViewListener !=null){
+            scrollViewListener.onScrollChanged( x, y, oldX, oldY);
+        }
+    }
+}

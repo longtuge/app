@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.coolweather.com.myapplication.view.MainActivity"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <!--<include layout="@layout/title_bar" />-->
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:text="首页"
+            android:drawableTop="@drawable/rb_home"
+            style="@style/ButtonStyle"/>
+        <RadioButton
+            android:id="@+id/rb_weiTao"
+            android:text="微淘"
+            android:drawableTop="@drawable/rb_weitao"
+            style="@style/ButtonStyle" />
+        <RadioButton
+            android:id="@+id/rb_message"
+            android:text="消息"
+            android:drawableTop="@drawable/rb_message"
+            style="@style/ButtonStyle" />
+        <RadioButton
+            android:id="@+id/rb_cart"
+            android:text="购物车"
+            android:drawableTop="@drawable/rb_cart"
+            style="@style/ButtonStyle" />
+        <RadioButton
+            android:id="@+id/rb_user"
+            android:text="我的淘宝"
+            android:drawableTop="@drawable/rb_user"
+            style="@style/ButtonStyle"
+             />
+    </RadioGroup>
+</LinearLayout>

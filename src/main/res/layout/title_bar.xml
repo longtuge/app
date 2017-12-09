@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#FF8A00"
+    >
+    <ImageButton
+        android:id="@+id/sao_yi_sao"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:background="#00000000"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/saoyisao"
+        />
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="#dddddddd"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/view">
+
+
+            <Button
+                android:drawableLeft="@mipmap/fangdajing"
+                android:id="@+id/button"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:textSize="12dp"
+                android:textColor="#dddddd"
+                android:text="奔驰C200" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="#00000000"
+                android:src="@mipmap/xiangji" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/hui_yuan_ma"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:background="#00000000"
+        android:src="@mipmap/huiyuanma" >
+    </ImageButton>
+</LinearLayout>

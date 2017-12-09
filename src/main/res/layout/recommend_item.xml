@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="180dp"
+    android:padding="10dp"
+    android:layout_height="200dp">
+    <View
+        android:background="#f4f4f4"
+        android:layout_width="180dp"
+        android:layout_height="5dp"/>
+    <ImageView
+        android:id="@+id/iv_recommend_item"
+        android:layout_width="180dp"
+        android:layout_height="120dp" />
+    <TextView
+        android:id="@+id/tv_recommend_item"
+        android:textColor="#111111"
+        android:textSize="12dp"
+        android:gravity="left"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp">
+
+        <TextView
+            android:text="¥"
+            android:textColor="#ff6112"
+            android:textSize="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp" />
+        <TextView
+            android:id="@+id/tv_recommend_item_price"
+            android:textColor="#ff6112"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp" />
+
+        <TextView
+            android:id="@+id/tv_recommend_item_buy"
+            android:textSize="10dp"
+            android:textColor="#a3a3a3"
+            android:layout_marginLeft="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp" />
+    </LinearLayout>
+</LinearLayout>

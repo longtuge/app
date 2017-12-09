@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_popup_window_item"
+        android:src="@mipmap/goods_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_popup_window_item"
+        android:text="text"
+        android:textColor="#111111"
+        android:textSize="18dp"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
